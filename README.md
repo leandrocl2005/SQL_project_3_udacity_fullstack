@@ -14,7 +14,7 @@ Replace the *newsdata.sql* in *newsdata* folder by the *newsdata.sql* provide by
 Enter with the commands in Git Bash:
 
 ```sh
-$ git clone https://github.com/leandrocl2005/SQL_project3_udacity_fullstack.git
+$ git clone https://github.com/leandrocl2005/SQL_project_3_udacity_fullstack.git
 $ cd SQL_project3_udacity_fullstack/
 $ cd vagrant
 $ vagrant up

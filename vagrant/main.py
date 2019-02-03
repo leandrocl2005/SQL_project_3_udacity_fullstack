@@ -71,18 +71,18 @@ SELECT *
 FROM
     (SELECT
         to_char(date_trunc('day', time), 'DD Mon YYYY'),
-        SUM(
+        (SUM(
             CASE WHEN status = '404 NOT FOUND' THEN 1 ELSE 0 END
-        )::DECIMAL / COUNT(status) AS percent_total
+        )::DECIMAL / COUNT(status) ) * 100 AS percent_total
     FROM log
     GROUP BY 1
     ORDER BY 1) AS temp_table
-WHERE percent_total > 0.01;
+WHERE percent_total > 1;
 """
 
 print("Em quais dias mais de 1% das requisições resultaram em erros?")
 print()
 print("{:>15s}{:>20s}".format("DATA", "PORCENTAGEM (%)"))
 result = get_query_result(query)[0]
-print("{:>15s}{:>19.4f}%".format(result[0], 100*float(result[1])))
+print("{:>15s}{:>19.4f}%".format(result[0], float(result[1])))
 print_breaks()

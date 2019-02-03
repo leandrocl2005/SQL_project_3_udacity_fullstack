@@ -14,7 +14,7 @@ Replace the *newsdata.sql* in *newsdata* folder by the *newsdata.sql* provide by
 Enter with the commands in Git Bash:
 
 ```sh
-$ git clone https://github.com/leandrocl2005/SQL_project3_udacity_fullstack.git
+$ git clone https://github.com/leandrocl2005/SQL_project_3_udacity_fullstack.git
 $ cd SQL_project3_udacity_fullstack/
 $ cd vagrant
 $ vagrant up
@@ -38,7 +38,7 @@ The dataset contains 3 tables: articles, authors and log. To see it, in Git Bash
 
 ```sh
 $ psql -d news
-news => \dt
+$ news => \dt
 ```
 
 To exit from psql, just press Ctrl+D. 
@@ -54,7 +54,7 @@ We want to answer 3 questions about the tables in our database (the questions ar
 To do that, just tip in Git Bash the following:
 
 ```sh
-> python3 main.py
+$ python3 main.py
 ```
 
 The result is like *result.txt* file.

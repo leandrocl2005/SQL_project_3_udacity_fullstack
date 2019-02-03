@@ -1,16 +1,18 @@
+Quais são os três artigos mais populares de todos os tempos?
+
                              Título       Nº de acessos
-   Candidate is jerk, alleges rival              342102
-   Bears love berries, alleges bear              256365
-   Bad things gone, say good people              171762
+   Candidate is jerk, alleges rival              338647
+   Bears love berries, alleges bear              253801
+   Bad things gone, say good people              170098
 
 ########==============================================########
 
 Quem são os autores de artigos mais populares de todos os tempos?
 
                              Author       Nº de acessos
-                    Ursula La Multa              512805
-             Rudolf von Treppenwitz              427781
-              Anonymous Contributor              171762
+                    Ursula La Multa              507594
+             Rudolf von Treppenwitz              423457
+              Anonymous Contributor              170098
 
 ########==============================================########
 

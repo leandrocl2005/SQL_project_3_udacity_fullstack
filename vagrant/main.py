@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import psycopg2
 
 
@@ -15,6 +16,7 @@ def print_breaks():
     print("########==============================================########")
     print()
 
+
 query = """
 SELECT title_path.t, count(log.path) AS c
 FROM
@@ -23,7 +25,9 @@ FROM
         log.path AS p
     FROM
         articles
-    LEFT JOIN log ON log.path ILIKE '%' || articles.slug || '%') AS title_path
+    LEFT JOIN log
+    ON log.path ILIKE '%' || articles.slug || '%'
+    AND log.status = '200 OK') AS title_path
 LEFT JOIN log on log.path = title_path.p
 GROUP BY title_path.t
 ORDER BY c DESC
@@ -47,7 +51,9 @@ FROM
         authors
     LEFT JOIN articles
     ON authors.id = articles.author) AS slug_name
-LEFT JOIN log on log.path ILIKE '%' || slug_name.ars || '%'
+LEFT JOIN log
+ON log.path ILIKE '%' || slug_name.ars || '%'
+AND log.status = '200 OK'
 GROUP BY slug_name.aun
 ORDER BY c DESC
 LIMIT(3);

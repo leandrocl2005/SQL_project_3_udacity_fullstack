@@ -38,7 +38,7 @@ The dataset contains 3 tables: articles, authors and log. To see it, in Git Bash
 
 ```sh
 $ psql -d news
-news => \dt
+$ news => \dt
 ```
 
 To exit from psql, just press Ctrl+D. 
@@ -54,7 +54,7 @@ We want to answer 3 questions about the tables in our database (the questions ar
 To do that, just tip in Git Bash the following:
 
 ```sh
-> python3 main.py
+$ python3 main.py
 ```
 
 The result is like *result.txt* file.
